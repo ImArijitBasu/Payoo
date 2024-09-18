@@ -1,11 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme='light'>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              },
+              fontFamily:{
+                'default' : 'outfit'
+              }
+            }
+          }
+        }
+      </script>
+
 </head>
+
 <body>
-    <h1>sfdsfd</h1>
+    <div class="mx-auto my-10 artboard phone-5 bg-slate-50 flex flex-col justify-center items-center relative">
+        <!-- balance part  -->
+         <div class="absolute top-5">
+             <div class=" flex items-center justify-between gap-20">
+                <img class="w-20" src="./payoo.png" alt="">
+                <div class="text-right">
+                    <div id="balance" class="text-3xl font-extrabold">45000</div>
+                    <div class="">Available Balance</div>
+                </div>
+            </div>
+            <div class="divider w-96"></div>
+         </div>
+         <!-- text part  -->
+          <div class="absolute top-36 px-8">
+            <h1 class="font-bold text-3xl leading-loose">🔥 Welcome to PAYOO</h1>
+            <h1 class="pl-3">Enjoy easy and convenient financial services with us. Cashout charge is low and </h1>
+            <div class="divider w-96"></div>
+          </div>
+          <!-- buttons  -->
+          <div class="absolute flex justify-between w-3/5">
+            <div class="btn font-bold border-green-400">Add money</div>
+            <div class="btn font-bold border-orange-400">Withdraw</div>
+          </div>
+          <div id="divider" class="divider bg-green-500"></div>
+          <!-- form part  -->
+           <div class="absolute bottom-0">
+            <div class="demo flex justify-center bg-gradient-to-t from-slate-500 to-transparent p-20 ">
+                <img src="./payoo.png" alt="">
+            </div>
+            
+           </div>
+    </div>
 </body>
 </html>
