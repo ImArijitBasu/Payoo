@@ -53,7 +53,7 @@ document.getElementById('logo').addEventListener('click', function () {
 
 // calculations 
 const history = document.getElementById('history-box');
-
+let newBalance = balance;
 addBtn.addEventListener('click', function (event) {
     event.preventDefault();
     const inPin = document.getElementById('input-pin').value;
@@ -63,7 +63,7 @@ addBtn.addEventListener('click', function (event) {
         alert('Pin only consists of numbers');
     }
     if (inPin === '017') {
-        let newBalance = balance + inMoney;
+        newBalance = newBalance + inMoney;
         document.getElementById('balance').innerText = newBalance;
 
         // history management
@@ -90,8 +90,12 @@ outBtn.addEventListener('click', function (event) {
     if(isNaN(outPin)){
         alert('Pin only consists of numbers');
     }
+    if(balance < outMoney){
+        alert('তুমি খয়রাতি 😐');
+        return;
+    }
     if (outPin === '017') {
-        let newBalance = balance - outMoney;
+        newBalance = newBalance - outMoney;
         document.getElementById('balance').innerText = newBalance;
         // history management
 
