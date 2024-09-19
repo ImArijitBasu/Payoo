@@ -55,9 +55,10 @@
       <p class="text-sm pl-3 text-gray-400">* Lorem ipsum dolor sit amet.</p>
     </div>
     <!-- buttons  -->
-    <div class="absolute flex justify-between w-3/5">
+    <div class="absolute flex justify-evenly space-x-4 w-3/5 -ml-20">
       <div id="add-money-btn" class="btn font-bold border-green-400">Add money</div>
       <div id="out-money-btn" class="btn font-bold border-orange-400">Withdraw</div>
+      <div id="history" class="btn font-bold border-purple-600">History</div>
     </div>
     <div id="divider" class="divider"></div>
     <!-- form part  -->
@@ -92,25 +93,37 @@
 
     </div>
     <!-- withdraw money part  -->
-    <div id="out-money" class="hidden">
-      <form class="card-body">
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Amount</span>
-          </label>
-          <input id="output-amount" type="number" placeholder="Enter your Amount of withdraw"
-            class="input input-bordered rounded-full" required />
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">4 Digit Pin</span>
-          </label>
-          <input id="output-pin" type="password" placeholder="Enter 4 Digit Pin"
-            class="input input-bordered rounded-full" required />
-          <div class="form-control mt-6">
-            <button id="btn-out-money" class="btn btn-primary rounded-full">Withdraw</button>
+
+
+    <div class="">
+      <div id="out-money" class="hidden">
+        <form class="card-body">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">Amount</span>
+            </label>
+            <input id="output-amount" type="number" placeholder="Enter your Amount of withdraw"
+              class="input input-bordered rounded-full" required />
           </div>
-      </form>
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text">4 Digit Pin</span>
+            </label>
+            <input id="output-pin" type="password" placeholder="Enter 4 Digit Pin"
+              class="input input-bordered rounded-full" required />
+            <div class="form-control mt-6">
+              <button id="btn-out-money" class="btn btn-primary rounded-full">Withdraw</button>
+            </div>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div id="history-part" class="hidden -mt-96">
+      <h1 class="text-center text-yellow-600 font-extrabold text-2xl uppercase underline">Transaction history</h1>
+      <div id="history-box" class="border-2 border-t-0 p-4 font-mono space-y-3">
+      </div>
     </div>
 
   </div>
