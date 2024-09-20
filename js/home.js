@@ -90,7 +90,7 @@ outBtn.addEventListener('click', function (event) {
     if(isNaN(outPin)){
         alert('Pin only consists of numbers');
     }
-    if(balance < outMoney){
+    if(newBalance < outMoney){
         alert('তুমি খয়রাতি 😐');
         return;
     }
